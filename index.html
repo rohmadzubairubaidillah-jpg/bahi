@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahardika Khosy | Creative & Analytical Branding</title>
+    <style>
+        :root {
+            --primary: #1a5276;    /* Biru Forex */
+            --secondary: #1d8348;  /* Hijau Seni */
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1611974714851-eb6747135073?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .profile-container { margin-top: -60px; text-align: center; }
+        .profile-img { 
+            width: 150px; height: 150px; 
+            border-radius: 50%; 
+            border: 5px solid white; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .main-content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h2 { color: var(--primary); margin-bottom: 20px; border-left: 5px solid var(--secondary); padding-left: 15px; }
+
+        .art-gallery { display: flex; flex-wrap: wrap; gap: 20px; }
+        .art-item { flex: 1 1 calc(50% - 20px); background: #f9f9f9; padding: 10px; border-radius: 10px; text-align: center; }
+        .art-item img { width: 100%; border-radius: 8px; height: 200px; object-fit: cover; }
+
+        .chart-box { height: 450px; width: 100%; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+        .edukasi-box { background: #f4f7f6; padding: 20px; border-radius: 10px; margin-top: 15px; }
+        
+        footer { text-align: center; padding: 40px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MAHARDIKA KHOSY</h1>
+        <p>Gabungan Kesenian Tradisional & Analisis Ekonomi Modern</p>
+    </header>
+
+    <div class="profile-container">
+        <img src="bahi.jpg" alt="Mahardika Khosy" class="profile-img">
+    </div>
+
+    <div class="main-content">
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah siswa <strong>MA Syi'ar Islam</strong> yang memiliki minat unik. Saya percaya bahwa disiplin dalam <strong>Trading Forex</strong> dan ketelitian dalam <strong>Seni Kaligrafi</strong> adalah dua hal yang saling melengkapi dalam membangun karakter saya.</p>
+            <p><strong>Misi:</strong> Terus belajar pemrograman (coding) untuk menciptakan solusi digital yang bermanfaat bagi sesama.</p>
+        </section>
+
+        <section id="art">
+            <h2>Galeri Seni Lukis & Kaligrafi</h2>
+            <div class="art-gallery">
+                <div class="art-item">
+                    <img src="https://via.placeholder.com/400x300?text=Kaligrafi" alt="Kaligrafi 1">
+                    <p>Seni Kaligrafi Arab</p>
+                </div>
+                <div class="art-item">
+                    <img src="https://via.placeholder.com/400x300?text=Lukisan" alt="Lukisan 1">
+                    <p>Lukisan Kanvas Abstrak</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="trading">
+            <h2>Analisis Forex Real-Time</h2>
+            <div class="chart-box" id="tradingview_widget">
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                new TradingView.widget({
+                    "autosize": true,
+                    "symbol": "FX:EURUSD",
+                    "interval": "H4",
+                    "timezone": "Asia/Jakarta",
+                    "theme": "light",
+                    "style": "1",
+                    "locale": "id",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_top_toolbar": true,
+                    "save_image": false,
+                    "container_id": "tradingview_widget"
+                });
+                </script>
+            </div>
+
+            <div class="edukasi-box">
+                <h3>Apa itu Forex?</h3>
+                <p>Forex (Foreign Exchange) adalah perdagangan mata uang global. Tujuannya adalah memanfaatkan fluktuasi nilai tukar untuk meraih profit melalui analisis yang tepat.</p>
+            </div>
+
+            <div class="edukasi-box">
+                <h3>3 Pilar Utama Trading</h3>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Analisis Teknikal:</strong> Membaca chart dan tren harga.</li>
+                    <li><strong>Fundamental:</strong> Memantau berita ekonomi global.</li>
+                    <li><strong>Psikologi:</strong> Mengelola emosi dan risiko (Money Management).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Kontak Person</h2>
+            <p>WhatsApp: <strong>+62 857-0888-9897</strong></p>
+            <p>Instagram: <strong>@bahi_gagal</strong></p>
+            <p>Sekolah: <strong>MA Syi'ar Islam, Rengel - Tuban</strong></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mahardika Khosy | Proyek Personal Branding Informatika</p>
+        <p>Tugas Praktik Informatika - Deadline: 12 Februari 2026</p>
+    </footer>
+
+</body>
+</html>
